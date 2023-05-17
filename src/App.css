@@ -2,37 +2,118 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* Use a gradient background for the header */
+  background: linear-gradient(to right, #282c34, #333);
   color: white;
+  padding: 20px;
+  font-size: 36px;
+  transition: transform 0.3s;
+  background-image: url('./acknowledge.jpg');
+  background-position:right;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  /* Use a different font family for the header text */
+  font-family: 'Impact', sans-serif;
+  /* Make the header text more bold and uppercase */
+  font-weight: bold;
+  text-transform: uppercase;
+
 }
 
-@keyframes App-logo-spin {
+.App-header:hover {
+  transform: scale(1.1);
+}
+
+.App-description:hover {
+  transform: scale(1.1);
+  font-style: italic;
+  background-color:#666;
+  color: white;
+
+}
+
+.App-main {
+  max-width: 800px;
+  margin: 0 auto;
+ 
+}
+
+.App-photo {
+  width: 80%;
+  margin: 20px;
+}
+
+/* Add some animations to the image using keyframes and transform properties */
+.App-photo-animation {
+  animation-name: photo-animation;
+  animation-duration: 3s;
+}
+
+@keyframes photo-animation {
   from {
     transform: rotate(0deg);
+    opacity: 0;
   }
+  
   to {
     transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+.App-description {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+.App-footer {
+  /* Use a gradient background for the footer */
+  background: linear-gradient(to right, #f0f0f0, #e6e6e6);
+  color: #666;
+  padding: 10px;
+  background-image: url('./acknowledge.jpg');
+  background-position:left;
+}
+
+.App-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-icons > * {
+  margin: 10px;
+}
+/* Add some animations to the icons using keyframes and transform properties */
+.App-icon-animation {
+  animation-name: icon-animation;
+  animation-duration: infinite;
+}
+
+@keyframes icon-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add some box shadows and border radius to the elements */
+.App-photo,
+.App-description,
+.App-footer {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
